@@ -16,5 +16,6 @@ def aryan_http(request):
 
 def aryan_dynamic(request , day):
     day_data = days.get(day)
-    return HttpResponse(f'dynamic day is : {day} and dictionary data is {day_data}')
+    html_data = f'<h1>dynamic day is : {day} and dictionary data is {day_data}</h1>'
+    return HttpResponse(html_data)
      
