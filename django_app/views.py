@@ -11,12 +11,10 @@ days = {
     'friday':'this is friday in dictionary',    
 }
 
-
-
 def aryan_http(request):
     return HttpResponse('i am in your app')
 
 def aryan_dynamic(request , day):
     day_data = days.get(day)
-    return HttpResponse(f'day is : {day} and data is {day_data}')
+    return HttpResponse(f'dynamic day is : {day} and dictionary data is {day_data}')
      
