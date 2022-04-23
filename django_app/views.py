@@ -19,3 +19,10 @@ def aryan_dynamic(request , day):
     html_data = f'<h1>dynamic day is : {day} and dictionary data is {day_data}</h1>'
     return HttpResponse(html_data)
      
+def days_list(request):
+    days_list = list(days.keys())
+    list_item = ""
+    for day in days_list:
+        list_item += f"<ul><li><a> {day} </a></li></ul>"
+        
+    return HttpResponse(list_item)
