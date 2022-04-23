@@ -1,5 +1,7 @@
+from urllib import request
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template.loader import render_to_string
 
 days = {
     'saturday':'this is saturday in dictionary',
@@ -26,3 +28,7 @@ def days_list(request):
         list_item += f"<ul><li><a> {day} </a></li></ul>"
         
     return HttpResponse(list_item)
+
+def aryan_html(request):
+    response_data = render_to_string('django_app/aryan.html')
+    return HttpResponse(response_data)

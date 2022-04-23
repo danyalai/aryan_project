@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
+
+from django_app.views import aryan_html
 from . import views
 
 urlpatterns = [
